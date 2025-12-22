@@ -39,14 +39,7 @@ def main():
             blue = cv2.cvtColor(img_array, cv2.COLOR_RGB2HSV)
             st.image(blue, caption="Blue Channel Image", width=300)
 
-            # Convert blue image to bytes for download
-            img_bytes = blue.tobytes()
-            st.download_button(
-                label="download image",
-                data=img_bytes,
-                file_name="blue_image.png",
-                mime="image/png"
-            )
+        
 
         # Display grayscale image
         #st.image(gray_image, caption='Grayscale Image', use_column_width=True, channels="GRAY")
@@ -56,4 +49,5 @@ def main():
         
 
 if __name__ == "__main__":
+
     main()
